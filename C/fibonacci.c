@@ -1,18 +1,17 @@
 #include<stdio.h>
+int fibonacci(int);
+
 int main(void){
-    unsigned int n,f1=1,f2=1;
-    printf("Inserire numero di elementi della sequenza di fibonacci da stampare:\t");
-    scanf("%u",&n);
-    if(n==1)
-        printf("unico elemento: 1\n");
-    else{
-        printf("I numeri richiesti sono: 1 1 ");
-        for(int i=0; i<n-2; i++){
-            f1=f1+f2;
-            printf("%u ",f1);
-            f2=f1-f2;
-        }
-    }
-    printf("\n");
+    int n;
+    printf("Inserire numero di cui calcolare la funzione di fibonacci:\t");
+    scanf("%d", &n);
+    printf("Fibonacci=%d", fibonacci(n));
     return 0;
+}
+
+int fibonacci(int x){
+    if (x<=1)
+        return x;
+    else   
+        x=fibonacci(x-1)+fibonacci(x-2);
 }
