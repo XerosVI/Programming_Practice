@@ -5,7 +5,7 @@ int main(void){
     int n;
     printf("Inserire numero di cui calcolare la funzione di fibonacci:\t");
     scanf("%d", &n);
-    printf("Fibonacci=%d", fibonacci(n));
+    printf("Fibonacci=%d\n", fibonacci(n));
     return 0;
 }
 
