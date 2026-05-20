@@ -10,7 +10,7 @@ int main(void){
 }
 
 int linear_search(int v[], int n, int x){
-    if(v[0]==x||n==0){
+    if(n==0||v[0]==x){
         return 0;
     }
     else
