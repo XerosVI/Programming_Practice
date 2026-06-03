@@ -1,0 +1,4 @@
+3
+I Promessi Sposi,Alessandro,Manzoni,571,38
+La fine dell'eternita',Isaac,Asimov,2361111,18
+Come un romanzo,Daniel,Pennac,139,67
