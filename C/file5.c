@@ -17,10 +17,15 @@ int main(void){
     fscanf(fp,"%zu\n",&num_libri);
     Libro libri[num_libri];
     for(size_t i=0; i<num_libri; i++){
-        fscanf(fp,"%[^,],%[^,],%[^,],%u,%u\n",libri[i].titolo,libri[i].autore_nome,libri[i].autore_cognome,&libri[i].num_pagine,&libri[i].num_capitoli);
+        fscanf(fp,"%[^,],%[^,],%[^,],%u,%u\n",
+            libri[i].titolo,
+            libri[i].autore_nome,
+            libri[i].autore_cognome,
+            &libri[i].num_pagine,
+            &libri[i].num_capitoli);
     }
-    Libro pippo=*(get_book_with_longest_chapters(libri,num_libri));
-    printf("il libro coi capitoli piu' lunghi e' %s", pippo.titolo);
+    Libro *pippo=get_book_with_longest_chapters(libri,num_libri);
+    printf("il libro coi capitoli piu' lunghi e' %s", pippo->titolo);
     fclose(fp);
     return 0;
 }
