@@ -4,7 +4,7 @@
 char cesare(char c, int k);
 
 int main (int argc, char *argv[]){
-    if(argv!=4){
+    if(argc!=4){
         printf("argomenti inseriti incorrettamente");
         return 1;
     }
