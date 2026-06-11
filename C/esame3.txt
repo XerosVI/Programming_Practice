@@ -1,0 +1,4 @@
+wikipedia.org 100
+google.com 100
+sito.com 100
+pippo.net 50
