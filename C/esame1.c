@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 char cesare(char c, int k);
+void cifrario(FILE *fp1, FILE *fp2, int k);
 
 int main (int argc, char *argv[]){
     if(argc!=4){
@@ -22,10 +23,7 @@ int main (int argc, char *argv[]){
         printf("File non aperto");
         return -1;
     }
-    char a;
-    while(fscanf(fp1,"%c",&a)>0){
-        fprintf(fp2,"%c",cesare(a,k));
-    }
+    cifrario(fp1,fp2,k);
     fclose(fp1);
     fclose(fp2);
     return 0;
@@ -39,4 +37,11 @@ char cesare(char c, int k){
         return ((c+k-'a')%26)+'a';
     else
         return c;
+}
+
+void cifrario(FILE *fp1, FILE *fp2, int k){
+    char a;
+    while(fscanf(fp1,"%c",&a)!=EOF){
+        fprintf(fp2,"%c",cesare(a,k));
+    }
 }
