@@ -1,1 +1,1 @@
-C code for my fundamentals of programming course.
+C code for my programming basics course.
